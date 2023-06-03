@@ -1,0 +1,124 @@
+// .form-group {
+//     margin-bottom: 1rem;
+//   }
+  
+//   label {
+//     display: block;
+//     margin-bottom: 0.5rem;
+//     font-weight: bold;
+//   }
+  
+//   .form-control {
+//     width: 100%;
+//     padding: 0.5rem;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//   }
+ 
+//   .error-message {
+//     color: red;
+//     margin-top: 0.5rem;
+//   }
+//   .card {
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     padding: 1rem;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//     width: 400px;
+//   }
+  
+//   .card-body {
+//     margin-top: 1rem;
+//   }
+$primary-color: #007bff;
+$primary-color-dark: #0069d9;
+$primary-color-light: #0062cc;
+$error-color: red;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-container {
+  width: 400px;
+
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .card-body {
+      margin-top: 1rem;
+
+      .form-group {
+        margin-bottom: 1.5rem;
+        position: relative;
+        .form-title {
+          margin-bottom: 1.5rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #513939;
+        }  
+
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: bold;
+        }
+      
+        .form-control {
+          width: 95%;
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          transition: border-color 0.2s ease-in-out;
+          margin-right: 20px !important;
+          
+
+          &:focus {
+            outline: none;
+            border-color: $primary-color;
+            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+          }
+        }
+
+        .password-toggle {
+          position: absolute;
+          top: 70%;
+          right: 0.5rem;
+          transform: translateY(-50%);
+          cursor: pointer;
+          color: #888;
+
+          &:hover {
+            color: #333;
+          }
+        }
+
+        .error-message {
+          color: $error-color;
+          margin-top: 0.5rem;
+        }
+      }
+
+      button[type='submit'] {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        margin-top: 1rem;
+
+        &:hover {
+          background-color: $primary-color-dark;
+          border-color: $primary-color-light;
+        }
+      }
+    }
+  }
+}
